@@ -1,5 +1,6 @@
 import express from "express";
 import {
+    createGuest,
     getGuests,
     getGuestById,
     deleteGuest,
@@ -7,6 +8,18 @@ import {
 } from "../controllers/guestController.js";
 
 const router = express.Router();
+
+/**
+ * @swagger
+ * /guests:
+ *   post:
+ *      summary: Save new guest
+ *      description Saves a new guest
+ *      responses:
+ *        200: 
+ *          description: Guest saved
+ */
+router.post("/guests", createGuest)
 
 /**
  * @swagger

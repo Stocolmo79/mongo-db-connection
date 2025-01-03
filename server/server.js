@@ -2,7 +2,6 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import guestRouter from "./src/routes/guestRoutes.js"
 import swaggerSetup from "./src/middleware/swagger.js" 
 dotenv.config();
 

@@ -25,9 +25,9 @@ const swaggerSetup = (app) => {
   const swaggerDocs = swaggerJSDoc(swaggerOptions);
 
   // Set up Swagger UI as a middleware at /api-docs
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+  app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-  console.log("Swagger documentation available at /api-docs");
+  console.log("Swagger documentation available at /swagger");
 };
 
 export default swaggerSetup;
